@@ -14,11 +14,11 @@ class ComponentBase extends Component{
         return "Hello nbee";
     }
     public function Base_url(){
-        return "http://".$_SERVER['SERVER_NAME'].'/asaso/';
+        return "http://".$_SERVER['SERVER_NAME'].'/asaco/';
         // return "http://".$_SERVER['SERVER_NAME'].'/';
     }
     public function Base_url_images(){
-        return "http://".$_SERVER['SERVER_NAME'].'/asaso/';
+        return "http://".$_SERVER['SERVER_NAME'].'/asaco/';
     	// return "http://".$_SERVER['SERVER_NAME'].'/';
     }
     public function convert_vi_to_en($str){

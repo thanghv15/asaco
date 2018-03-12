@@ -2,7 +2,7 @@ Options +FollowSymlinks
 RewriteEngine On
 
 # deal with admin first
-RewriteCond %{REQUEST_URI} ^/asaso/(admin) 
+RewriteCond %{REQUEST_URI} ^/asaco/(admin) 
 RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
 RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
 RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
@@ -11,22 +11,22 @@ RewriteRule ^admin/dist/(.*)$ backend/web/dist/$1 [L]
 RewriteRule ^admin/uploads/(.*)$ backend/web/uploads/$1 [L]
 RewriteRule ^admin/fonts/(.*)$ backend/web/fonts/$1 [L]
 
-RewriteCond %{REQUEST_URI} !^/asaso/backend/web/(assets|css)/
-RewriteCond %{REQUEST_URI} !^/asaso/backend/web/(assets|js)/ 
-RewriteCond %{REQUEST_URI} !^/asaso/backend/web/(assets|plugins)/  
-RewriteCond %{REQUEST_URI} !^/asaso/backend/web/(assets|dist)/  
-RewriteCond %{REQUEST_URI} !^/asaso/backend/web/(assets|uploads)/  
-RewriteCond %{REQUEST_URI} !^/asaso/backend/web/(assets|fonts)/  
-RewriteCond %{REQUEST_URI} ^/asaso/(admin) 
+RewriteCond %{REQUEST_URI} !^/asaco/backend/web/(assets|css)/
+RewriteCond %{REQUEST_URI} !^/asaco/backend/web/(assets|js)/ 
+RewriteCond %{REQUEST_URI} !^/asaco/backend/web/(assets|plugins)/  
+RewriteCond %{REQUEST_URI} !^/asaco/backend/web/(assets|dist)/  
+RewriteCond %{REQUEST_URI} !^/asaco/backend/web/(assets|uploads)/  
+RewriteCond %{REQUEST_URI} !^/asaco/backend/web/(assets|fonts)/  
+RewriteCond %{REQUEST_URI} ^/asaco/(admin) 
 RewriteRule ^.*$ backend/web/index.php [L]
 
 # for frontend
-RewriteCond %{REQUEST_URI} ^/asaso/(assets|css) 
-RewriteCond %{REQUEST_URI} ^/asaso/(assets|js)  
-RewriteCond %{REQUEST_URI} ^/asaso/(assets|plugins)  
-RewriteCond %{REQUEST_URI} ^/asaso/(assets|dist)   
-RewriteCond %{REQUEST_URI} ^/asaso/(assets|fonts)   
-RewriteCond %{REQUEST_URI} ^/asaso/(assets|image)   
+RewriteCond %{REQUEST_URI} ^/asaco/(assets|css) 
+RewriteCond %{REQUEST_URI} ^/asaco/(assets|js)  
+RewriteCond %{REQUEST_URI} ^/asaco/(assets|plugins)  
+RewriteCond %{REQUEST_URI} ^/asaco/(assets|dist)   
+RewriteCond %{REQUEST_URI} ^/asaco/(assets|fonts)   
+RewriteCond %{REQUEST_URI} ^/asaco/(assets|image)   
 RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
 RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
 RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
@@ -37,10 +37,10 @@ RewriteRule ^image/(.*)$ frontend/web/image/$1 [L]
 
 #public
 RewriteRule ^public/(.*)$ public/$1 [L]
-RewriteCond %{REQUEST_URI} !^/asaso/public/(assets|images)/
-RewriteCond %{REQUEST_URI} !^/asaso/public/(assets|file)/
+RewriteCond %{REQUEST_URI} !^/asaco/public/(assets|images)/
+RewriteCond %{REQUEST_URI} !^/asaco/public/(assets|file)/
 
-RewriteCond %{REQUEST_URI} !^/asaso/(frontend|backend)/web/(assets|css)/  
+RewriteCond %{REQUEST_URI} !^/asaco/(frontend|backend)/web/(assets|css)/  
 RewriteCond %{REQUEST_URI} !index.php
 RewriteCond %{REQUEST_FILENAME} !-f [OR]
 RewriteCond %{REQUEST_FILENAME} !-d
